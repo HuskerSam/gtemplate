@@ -1,0 +1,10 @@
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+@import './vanilla-framework-version-4.12.0.min.css';
+@import './base.css';
+@import "./tabulator.css";
+@import "./tabsimple.css";
+@import "./slimselect.css";
+@import "./inter.css";
+@import './mainpage.css';

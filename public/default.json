@@ -1,0 +1,25 @@
+[
+    {
+      "segment": "userFile",
+      "count": 1,
+      "description": "Upload document 1",
+      "moniker": "First Document",
+      "prefixText": "",
+      "suffixPrompt": ""
+    },
+    {
+      "segment": "userFile",
+      "count": 1,
+      "description": "Upload document 2",
+      "moniker": "Second Document",
+      "prefixText": "",
+      "suffixPrompt": ""
+    },
+    {
+      "segment": "userInstruction",
+      "description": "What do you want done with this document?",
+      "moniker": "Instructions",
+      "prefixText": "User Request Follows: \n-----------------------------\n",
+      "suffixPrompt": "\n-----------------------------\n\nPlease respond to the user request above."
+    }
+  ]

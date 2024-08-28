@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <title>Semantic Template Example</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+  <script src="
+  https://cdnjs.cloudflare.com/ajax/libs/ace/1.9.6/ace.js"></script>
+  <link href="css/output.css" rel="stylesheet">
+  <script src="uicode/models/index.js" type="module"></script>
+</head>
+
+<body class="flex flex-col h-full p-1">
+  <script>
+    if (localStorage.getItem("niteMode") !== "true") document.body.classList.add("day_mode");
+    else document.body.classList.add("nite_mode");
+  </script>
+  <div class="standard_header_bar_container absolute top-0 right-0 z-10"></div>
+  <div class="p-tabs flex-1 flex-col flex">
+    <div class="p-tabs__list" role="tablist" aria-label="Outbound Message">
+      <div class="p-tabs__item">
+        <button class="p-tabs__link" role="tab" aria-selected="true" aria-controls="executetab_tab_id"
+          id="executetab">Execute</button>
+      </div>
+      <div class="p-tabs__item">
+        <button class="p-tabs__link" role="tab" aria-selected="false" aria-controls="edittab_tab_id"
+          id="edittab">Edit</button>
+      </div>
+      <div class="p-tabs__item">
+        <button class="p-tabs__link" role="tab" aria-selected="false" aria-controls="historytab_tab_id" id="historytab"
+          tabindex="-1">History</button>
+      </div>
+      <div class="flex-1 text-right">
+        <button class="tab_info_toggle border-none mt-1">
+          <svg xmlns="http://www.w3.org/2000/svg" height="40px" viewBox="0 -960 960 960" width="40px" fill="#5f6368">
+            <path
+              d="M440-280h80v-240h-80v240Zm40-320q17 0 28.5-11.5T520-640q0-17-11.5-28.5T480-680q-17 0-28.5 11.5T440-640q0 17 11.5 28.5T480-600Zm0 520q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Zm0-80q134 0 227-93t93-227q0-134-93-227t-227-93q-134 0-227 93t-93 227q0 134 93 227t227 93Zm0-320Z" />
+          </svg>
+        </button>
+      </div>
+    </div>
+    <div class="flex-1 flex flex-col overflow-hidden" tabindex="0" role="tabpanel" id="executetab_tab_id"
+      aria-labelledby="executetab">
+      <div class="tab_info_details">
+        Enter test data and run prompt template
+      </div>
+      <div class="flex flex-row overflow-hidden flex-1">
+        <div class="flex flex-col overflow-hidden left_ui_panel">
+          <div class="segment_ui_containers overflow-auto flex-1"></div>
+          <div class="flex flex-row mt-1">
+            <div class="flex-1 flex flex-row">
+              <div class="pt-3">Note: &nbsp; </div>
+              <input class="note_input mt-1" type="text" placeholder="optional" />
+            </div>
+            <div class="p-1">
+              <button class="analyze_prompt_button btn btn-ts-primary p-2">
+                Execute Prompt
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="right_ui_panel flex flex-col">
+          <div class="flex-1 p-1 overflow-auto">
+            <div class="full_augmented_response m-2 small-caps"></div>
+          </div>
+          <div class="p-1">
+            <a href="" class="prompt_response_link whitespace-nowrap" target="_blank">&nbsp;</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div tabindex="0" class="flex-1 flex flex-col overflow-hidden" role="tabpanel" id="edittab_tab_id"
+      aria-labelledby="edittab" hidden="hidden">
+      <div class="tab_info_details">
+        Edit or generate (ai) a prompt template
+      </div>
+      <div class="flex flex-row overflow-hidden flex-1">
+        <div class="flex flex-col left_generate_block p-1">
+          <div class="relative p-1 flex flex-col flex-1">
+            <div id="template_editor" class="flex-1 absolute top-0 left-0 bottom-0 right-0"></div>
+          </div>
+          <div class="text-right pt-1 border-t border-slate-300">
+            <button class="revert_template_button btn btn-ts-secondary p-2">
+              Revert Template
+            </button>
+            &nbsp;
+            <button class="save_template_button btn btn-ts-secondary p-2">
+              Save Template
+            </button>
+          </div>
+        </div>
+        <div class="flex flex-col p-1 right_generate_block">
+          <div class="my-3 mx-2">
+            <p class="form-input-label-ts mb-1">Select template data to start from:</p>
+            <div class="block">
+              <label
+                class="text-gray-500 hover:bg-gray-100 hover:text-gray-900 rounded-md px-2 py-2 text-sm font-medium">
+                <input type="radio" name="generate_source" value="default" class="inline-block m-2">Start from default
+              </label>
+              &nbsp;
+              <label
+                class="text-gray-500 hover:bg-gray-100 hover:text-gray-900 rounded-md px-2 py-2 text-sm font-medium">
+                <input type="radio" name="generate_source" checked value="current" class="inline-block m-2">Start from current
+              </label>
+            </div>
+          </div>
+          <div class="flex-1 flex-col flex">
+            <textarea class="generate_prompt_instructions m-1 flex-1" resize="none"
+            placeholder="instructions to generate prompt"
+            type="text"></textarea>
+          </div>
+          <div class="m-1 text-right">
+            <button class="generate_template_button btn btn-ts-secondary p-2">
+              Generate Template
+            </button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <div tabindex="0" class="flex-1 flex flex-col overflow-hidden" role="tabpanel" id="historytab_tab_id"
+      aria-labelledby="historytab" hidden="hidden">
+      <div class="tab_info_details">
+        log history of runs
+      </div>
+      <div class="flex flex-col overflow-hidden flex-1">
+        <div class="toolbar text-right">
+          <button class="download_history_button btn btn-ts-secondary p-2">
+            Download History
+          </button>
+          &nbsp;
+          <button class="clear_history_button btn btn-ts-secondary p-2">
+            Clear History
+          </button>
+        </div>
+        <div class="flex-1 flex flex-col overflow-hidden">
+          <div class="tabulator_history_list custom_tabulator_styles m-2"></div>
+          <div id="execution_log_viewer" class="m-2"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <datalist id="adjust_tags_datalist"></datalist>
+</body>
+
+</html>

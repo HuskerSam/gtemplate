@@ -1,0 +1,47 @@
+{
+  "functions": [
+    {
+      "source": "functions",
+      "codebase": "default",
+      "ignore": [
+        "node_modules",
+        ".git",
+        "firebase-debug.log",
+        "firebase-debug.*.log",
+        "*.local"
+      ],
+      "predeploy": [
+        "npm --prefix \"$RESOURCE_DIR\" run lint",
+        "npm --prefix \"$RESOURCE_DIR\" run build"
+      ]
+    }
+  ],
+  "hosting": {
+    "public": "public",
+    "rewrites": [
+      {
+        "source": "/getToken",
+        "function": "getToken"
+      }
+    ],
+    "headers": [
+      {
+        "source": "**/**",
+        "headers": [
+          {
+            "key": "Access-Control-Allow-Origin",
+            "value": "*"
+          }
+        ]
+      }
+    ],
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ]
+  },
+  "storage": {
+    "rules": "storage.rules"
+  }
+}

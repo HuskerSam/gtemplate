@@ -1,0 +1,451 @@
+{
+  "indexes": [
+    {
+      "collectionGroup": "AdminMessages",
+      "queryScope": "COLLECTION",
+      "fields": [
+        {
+          "fieldPath": "address",
+          "order": "ASCENDING"
+        },
+        {
+          "fieldPath": "when",
+          "order": "DESCENDING"
+        }
+      ]
+    },
+    {
+      "collectionGroup": "AdminMessages",
+      "queryScope": "COLLECTION",
+      "fields": [
+        {
+          "fieldPath": "email",
+          "order": "ASCENDING"
+        },
+        {
+          "fieldPath": "when",
+          "order": "DESCENDING"
+        }
+      ]
+    },
+    {
+      "collectionGroup": "AdminMessages",
+      "queryScope": "COLLECTION",
+      "fields": [
+        {
+          "fieldPath": "messageRead",
+          "order": "ASCENDING"
+        },
+        {
+          "fieldPath": "address",
+          "order": "ASCENDING"
+        },
+        {
+          "fieldPath": "when",
+          "order": "DESCENDING"
+        }
+      ]
+    },
+    {
+      "collectionGroup": "AdminMessages",
+      "queryScope": "COLLECTION",
+      "fields": [
+        {
+          "fieldPath": "messageRead",
+          "order": "ASCENDING"
+        },
+        {
+          "fieldPath": "email",
+          "order": "ASCENDING"
+        },
+        {
+          "fieldPath": "when",
+          "order": "DESCENDING"
+        }
+      ]
+    },
+    {
+      "collectionGroup": "AdminMessages",
+      "queryScope": "COLLECTION",
+      "fields": [
+        {
+          "fieldPath": "messageRead",
+          "order": "ASCENDING"
+        },
+        {
+          "fieldPath": "when",
+          "order": "DESCENDING"
+        }
+      ]
+    },
+    {
+      "collectionGroup": "Listings",
+      "queryScope": "COLLECTION",
+      "fields": [
+        {
+          "fieldPath": "adminHidden",
+          "order": "ASCENDING"
+        },
+        {
+          "fieldPath": "address",
+          "order": "DESCENDING"
+        }
+      ]
+    },
+    {
+      "collectionGroup": "Listings",
+      "queryScope": "COLLECTION",
+      "fields": [
+        {
+          "fieldPath": "adminHidden",
+          "order": "ASCENDING"
+        },
+        {
+          "fieldPath": "id",
+          "order": "ASCENDING"
+        }
+      ]
+    },
+    {
+      "collectionGroup": "Listings",
+      "queryScope": "COLLECTION",
+      "fields": [
+        {
+          "fieldPath": "adminHidden",
+          "order": "ASCENDING"
+        },
+        {
+          "fieldPath": "lastReported",
+          "order": "DESCENDING"
+        }
+      ]
+    },
+    {
+      "collectionGroup": "Listings",
+      "queryScope": "COLLECTION",
+      "fields": [
+        {
+          "fieldPath": "adminHidden",
+          "order": "ASCENDING"
+        },
+        {
+          "fieldPath": "scrapedFirst",
+          "order": "ASCENDING"
+        }
+      ]
+    },
+    {
+      "collectionGroup": "Listings",
+      "queryScope": "COLLECTION",
+      "fields": [
+        {
+          "fieldPath": "adminHidden",
+          "order": "ASCENDING"
+        },
+        {
+          "fieldPath": "scrapedFirst",
+          "order": "DESCENDING"
+        }
+      ]
+    },
+    {
+      "collectionGroup": "Listings",
+      "queryScope": "COLLECTION",
+      "fields": [
+        {
+          "fieldPath": "adminHidden",
+          "order": "ASCENDING"
+        },
+        {
+          "fieldPath": "zipcode",
+          "order": "DESCENDING"
+        }
+      ]
+    },
+    {
+      "collectionGroup": "Listings",
+      "queryScope": "COLLECTION",
+      "fields": [
+        {
+          "fieldPath": "adminReported",
+          "order": "ASCENDING"
+        },
+        {
+          "fieldPath": "address",
+          "order": "DESCENDING"
+        }
+      ]
+    },
+    {
+      "collectionGroup": "Listings",
+      "queryScope": "COLLECTION",
+      "fields": [
+        {
+          "fieldPath": "adminReported",
+          "order": "ASCENDING"
+        },
+        {
+          "fieldPath": "id",
+          "order": "ASCENDING"
+        }
+      ]
+    },
+    {
+      "collectionGroup": "Listings",
+      "queryScope": "COLLECTION",
+      "fields": [
+        {
+          "fieldPath": "adminReported",
+          "order": "ASCENDING"
+        },
+        {
+          "fieldPath": "lastReported",
+          "order": "DESCENDING"
+        }
+      ]
+    },
+    {
+      "collectionGroup": "Listings",
+      "queryScope": "COLLECTION",
+      "fields": [
+        {
+          "fieldPath": "adminReported",
+          "order": "ASCENDING"
+        },
+        {
+          "fieldPath": "scrapedFirst",
+          "order": "ASCENDING"
+        }
+      ]
+    },
+    {
+      "collectionGroup": "Listings",
+      "queryScope": "COLLECTION",
+      "fields": [
+        {
+          "fieldPath": "adminReported",
+          "order": "ASCENDING"
+        },
+        {
+          "fieldPath": "scrapedFirst",
+          "order": "DESCENDING"
+        }
+      ]
+    },
+    {
+      "collectionGroup": "Listings",
+      "queryScope": "COLLECTION",
+      "fields": [
+        {
+          "fieldPath": "adminReported",
+          "order": "ASCENDING"
+        },
+        {
+          "fieldPath": "zipcode",
+          "order": "DESCENDING"
+        }
+      ]
+    },
+    {
+      "collectionGroup": "listingsMeta",
+      "queryScope": "COLLECTION",
+      "fields": [
+        {
+          "fieldPath": "userListingStatus",
+          "order": "ASCENDING"
+        },
+        {
+          "fieldPath": "when",
+          "order": "DESCENDING"
+        }
+      ]
+    },
+    {
+      "collectionGroup": "NotificationsLog",
+      "queryScope": "COLLECTION",
+      "fields": [
+        {
+          "fieldPath": "email",
+          "order": "ASCENDING"
+        },
+        {
+          "fieldPath": "when",
+          "order": "DESCENDING"
+        }
+      ]
+    },
+    {
+      "collectionGroup": "NotificationsLog",
+      "queryScope": "COLLECTION",
+      "fields": [
+        {
+          "fieldPath": "uid",
+          "order": "ASCENDING"
+        },
+        {
+          "fieldPath": "when",
+          "order": "DESCENDING"
+        }
+      ]
+    },
+    {
+      "collectionGroup": "Users",
+      "queryScope": "COLLECTION",
+      "fields": [
+        {
+          "fieldPath": "notificationsEnabled",
+          "order": "ASCENDING"
+        },
+        {
+          "fieldPath": "email",
+          "order": "ASCENDING"
+        }
+      ]
+    },
+    {
+      "collectionGroup": "Users",
+      "queryScope": "COLLECTION",
+      "fields": [
+        {
+          "fieldPath": "notificationsEnabled",
+          "order": "ASCENDING"
+        },
+        {
+          "fieldPath": "lastName",
+          "order": "ASCENDING"
+        }
+      ]
+    },
+    {
+      "collectionGroup": "Users",
+      "queryScope": "COLLECTION",
+      "fields": [
+        {
+          "fieldPath": "notificationsEnabled",
+          "order": "ASCENDING"
+        },
+        {
+          "fieldPath": "lastUpdated",
+          "order": "DESCENDING"
+        }
+      ]
+    },
+    {
+      "collectionGroup": "Users",
+      "queryScope": "COLLECTION",
+      "fields": [
+        {
+          "fieldPath": "notificationsEnabled",
+          "order": "ASCENDING"
+        },
+        {
+          "fieldPath": "notificationLastSent",
+          "order": "ASCENDING"
+        }
+      ]
+    },
+    {
+      "collectionGroup": "Users",
+      "queryScope": "COLLECTION",
+      "fields": [
+        {
+          "fieldPath": "notificationsEnabled",
+          "order": "ASCENDING"
+        },
+        {
+          "fieldPath": "notificationLastSent",
+          "order": "DESCENDING"
+        }
+      ]
+    },
+    {
+      "collectionGroup": "Users",
+      "queryScope": "COLLECTION",
+      "fields": [
+        {
+          "fieldPath": "notificationTimeOfDay",
+          "order": "ASCENDING"
+        },
+        {
+          "fieldPath": "notificationsEnabled",
+          "order": "ASCENDING"
+        },
+        {
+          "fieldPath": "notificationLastCheck",
+          "order": "ASCENDING"
+        }
+      ]
+    },
+    {
+      "collectionGroup": "Users",
+      "queryScope": "COLLECTION",
+      "fields": [
+        {
+          "fieldPath": "seekingStatus",
+          "order": "ASCENDING"
+        },
+        {
+          "fieldPath": "email",
+          "order": "ASCENDING"
+        }
+      ]
+    },
+    {
+      "collectionGroup": "Users",
+      "queryScope": "COLLECTION",
+      "fields": [
+        {
+          "fieldPath": "seekingStatus",
+          "order": "ASCENDING"
+        },
+        {
+          "fieldPath": "lastName",
+          "order": "ASCENDING"
+        }
+      ]
+    },
+    {
+      "collectionGroup": "Users",
+      "queryScope": "COLLECTION",
+      "fields": [
+        {
+          "fieldPath": "seekingStatus",
+          "order": "ASCENDING"
+        },
+        {
+          "fieldPath": "lastUpdated",
+          "order": "DESCENDING"
+        }
+      ]
+    },
+    {
+      "collectionGroup": "Users",
+      "queryScope": "COLLECTION",
+      "fields": [
+        {
+          "fieldPath": "seekingStatus",
+          "order": "ASCENDING"
+        },
+        {
+          "fieldPath": "notificationLastSent",
+          "order": "ASCENDING"
+        }
+      ]
+    },
+    {
+      "collectionGroup": "Users",
+      "queryScope": "COLLECTION",
+      "fields": [
+        {
+          "fieldPath": "seekingStatus",
+          "order": "ASCENDING"
+        },
+        {
+          "fieldPath": "notificationLastSent",
+          "order": "DESCENDING"
+        }
+      ]
+    }
+  ],
+  "fieldOverrides": []
+}
